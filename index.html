@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>AirLine Ticket Management System | SE Project</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="./img/icon.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="Javascript/index.js"></script>
+        <script src="Javascript/uni.js"></script>
+        <style>
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height: 100%;
+    font-family: "Raleway, Lexend Deca" !important;
+    background: #fff !important;
+}
+           
+.menu{
+    background-color: #1B262C;
+    height: 8vh;
+    font-family: Raleway;
+    color: white;
+    
+}
+
+.menu ul{
+    width: 800px;
+    list-style-type: none;
+    margin-top: 30px;
+    float: none;
+    position: absolute;
+    left: 54%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 700px) {
+    .menu ul{
+        width: 400px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .menu ul{
+        width: 900px;
+    }
+}
+
+.menu ul img{
+    width: 110px;
+    padding-right: 40px;
+    align-content: center;
+    position: unset;
+
+}
+
+.menu ul li{
+    font-weight: bold;
+    display: inline-block;
+}
+.menu ul li a{
+    font-size: 12px;
+    padding-right: 10px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: 0.1s ease;
+}
+
+.menu ul li a:hover{
+    color: #C0C0C0;
+}
+
+#mainSec{
+    top:0;
+    height: 7vh;
+    width: 100%;
+    background-color: white;
+    background-size: cover;
+    background-attachment: local;
+    position: fixed;
+    z-index: 99;
+}
+
+.active{
+
+    border-bottom: solid #e01933; 
+}
+
+#login{
+    background: #e51937;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    text-align: none;
+}
+
+#login li a:hover{
+    cursor: pointer;
+    color: white;
+}
+
+#one{
+    padding-right: 10px;
+}
+
+#one li a{
+    font-weight: bolder;
+    
+}
+
+#two li a{
+    font-weight: 600;
+    
+}   
+
+           div.TopBar button {
+                margin: 0 1px;
+                font-family: Raleway;
+                background-color: #1B262C;
+                border-width: 0px;
+                font-size: 12px;
+                font-weight: bolder;
+                padding-right: 10px;
+                text-align: center;
+                color: inherit;
+                transition-duration: 0.2s;
+                color: white;
+            }
+
+
+            div.TopBar #display_username {
+                font-weight: 600;
+                margin: 0 10px;
+            }
+
+            .admin {
+                display: none;
+            }
+
+            .back_srch {
+                display: none;
+            }
+
+#div1{
+    background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('./img/city.jpg');
+    height: 40vh;
+    /*background: #BBE1FA;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    padding-top: 200px;
+    opacity: 1;
+}
+
+.title{
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -50px;
+    z-index: 0;
+}
+
+.cardTitle{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 150px;
+    width: 450px;   
+    z-index: 0;
+}
+
+.cardTitle a{
+    text-decoration: none;
+    font-family: Bahnschrift !important;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+
+#div1 .title span{
+    font-family: Codec Warm Trial !important;
+    font-weight: 1000;
+    font-size: 40px;
+    color: #fff;
+
+}
+
+.title span:hover, .cardTitle a:hover{
+    text-decoration: underline;
+}
+
+#booking{
+    margin-top: -15rem;
+    position: relative;
+}
+
+
+#div2{
+    background-color: white;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1;
+}
+
+#div2 .header{
+    margin-top: 100px;
+    text-align: center;
+    color: #0b1f66;
+}
+#div2 .header span{
+    font-weight: bold;
+    font-family: Bahnschrift !important;
+    
+}
+
+#div2 .header p{
+    font-family: Raleway; 
+    font-weight: 4300;
+    font-size: 3.25rem;
+}
+
+
+.columnCard {
+  box-sizing: border-box;
+  float: left;
+  width: 33.33%;
+  padding: 60px;
+  height: 300px;
+}
+
+#div2 .container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#div2 .columnCard img{
+    padding-left: 50px;
+    padding-bottom: 100px;
+    width: 170px;
+}
+
+
+
+.columnCard #text{
+    font-family: Bahnschrift !important;
+    font-weight: lighter;
+    color:  #0b1f66;
+    padding-left: 50px;
+    padding-right: 0px;
+
+}
+
+.columnCard #text h3{
+    color:  #0b1f66;
+}
+
+#div3{
+    background-color: #fff;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#div4{
+    background-color: #1B262C;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.error {
+    color: red;
+    margin-left: 5px;
+}
+
+        </style>
+    </head>
+    <body>
+    
+        <section id="mainSec">
+        <div class="TopBar">
+            <div class="menu">
+             <ul>
+                <img src="./img/logo.png">
+                <span id="one">
+                <li class="" name="back_srch" ><a href="#">BOOK</a></li>
+                <li><a href="#" name="back_srch">FLIGHT STATUS</a></li>
+                <span id="two">
+                <li><a href="#">Need Help?</a></li>
+                <li><a href="#">Contact US</a></li>
+                </span>
+                </span>
+            
+
+                <li><div class="bookedTickets">
+                   <button type="button" name="bookedTickets" value="bookedTickets">Booked Tickets</button>
+                </div>
+                </li>
+                
+                <li><div class="back_srch">
+                    <button type="button" name="back_srch">Back to Search</button>
+                </div></li>
+
+                <li><div class="login">
+                    <button type="button" name="login" value="login" id="login">LogIn</button>
+                </div></li> 
+
+                <li><div class="signup">
+                    <button type="button" name="signup" value="signup" id="signup">SignUp</button>
+                </div></li>
+                
+                <li><div class="admin">
+                    <button type="button" name="admin" value="admin" id="admin">ADMIN CONSOLE</button>
+                </div></li>
+                <li><div id="display_username"></div></li>
+                <li>
+                <div class="logout">
+                    <button type="button" name="logout" value="logout" id="logout">LOGOUT</button>
+                </div></li>
+            </ul>
+            </div>
+            </div>
+        </section>
+        <div id="div1" name="div1" value="div1">
+            <div class="title">
+                <span>EXPLORE WHERE<br>WE CAN TAKE YOU.</span>
+            </div>
+            <div class="cardTitle">
+                <a href="#">
+                    When you're ready to travel, we're ready to take you. Start planning with our current list of destinations. >
+                </a>
+            </div>
+        </div>
+        <section id="booking">
+        <div class="body" style="margin-top: 100px;"></div>
+        </section>
+
+        <section id="div2">
+    <div class="header">
+        <span>THE AIRLINE CUSTOMER EXPERIENCE</span>
+        <p>Supporting You Through Your Travel Journey</p>
+    </div>
+
+    <div class="container">
+            <div class="columnCard">
+                <img src="./img/calendar.png" style="padding-left: 50%;">
+                <div id="text" style="padding-left: 20%;"><h3>CAN I CANCEL?CHANGE MY FLIGHT</h3><br>We understand you have questions. Learn more about our simplified waivers and find out if your upcoming flight qualifies.</div>
+            </div>
+            <div class="columnCard">
+                <img src="./img/ticket.png" style="padding-left: 30%;">
+                <div id="text" style="padding-left: 20%;"><h3>HOW DO I CHANGE MY FLIGHT?</h3><br>If your trip has been impacted by coronavirus, it's easy to cancel or change your flights. Learn how to modify your trip and rebook using eCredits with our step-by-step guides.</div>
+            </div>
+            <div class="columnCard">
+                <img src="./img/notification.png" style="width: 120px; margin-top: 40px; padding-bottom: 92px;">
+                <div id="text"><h3>WHAT ARE THE LATEST TRAVEL UPDATES?</h3><br>Information is more important than ever. We pledge to share updates with you as quickly as possible, with full transparency and, as always, with your safety foremost in mind.
+                </div>      
+            </div>
+    </div>
+    </section>
+    <section id="div3">   
+    </section>
+    <section id="div4">                  
+    </section>
+
+    </body>
+</html>
